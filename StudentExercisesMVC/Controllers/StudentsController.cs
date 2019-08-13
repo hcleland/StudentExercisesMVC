@@ -98,7 +98,8 @@ namespace StudentExercisesMVC.Controllers
         // GET: Student/Create
         public ActionResult Create()
         {
-            var viewModel = new StudentCreateViewModel(_config.GetConnectionString("DefaultConnection"));
+            var viewModel = new StudentCreateViewModel(
+                _config.GetConnectionString("DefaultConnection"));
             return View(viewModel);
         }
 
