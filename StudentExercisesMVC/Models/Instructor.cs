@@ -24,7 +24,7 @@ namespace StudentExercisesMVC.Models
         public  string SlackHandle { get; set; }
 
         [Required]
-        public string Speciality { get; set; }
+        public string Specialty { get; set; }
 
         [Required]
         [Display(Name = "Cohort Id")]
