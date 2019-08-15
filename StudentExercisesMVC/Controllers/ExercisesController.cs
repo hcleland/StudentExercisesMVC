@@ -90,10 +90,12 @@ namespace StudentExercisesMVC.Controllers
             return View(exercise);
         }
 
-        // GET: Exercises/Create
+        // GET: Student/Create
         public ActionResult Create()
         {
-            return View();
+            var viewModel = new ExerciseCreateViewModel(
+                _config.GetConnectionString("DefaultConnection"));
+            return View(viewModel);
         }
 
         // POST: Exercises/Create

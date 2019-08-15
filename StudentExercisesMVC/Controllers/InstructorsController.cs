@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using StudentExercises.Models.ViewModels;
 using StudentExercisesMVC.Models;
 
 namespace StudentExercisesMVC.Controllers
@@ -95,10 +96,12 @@ namespace StudentExercisesMVC.Controllers
             return View(instructor);
         }
 
-        // GET: Instructors/Create
+        // GET: Instructor/Create
         public ActionResult Create()
         {
-            return View();
+            var viewModel = new InstructorCreateViewModel(
+                _config.GetConnectionString("DefaultConnection"));
+            return View(viewModel);
         }
 
         // POST: Instructors/Create

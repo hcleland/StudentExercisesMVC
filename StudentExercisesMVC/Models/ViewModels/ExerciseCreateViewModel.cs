@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace StudentExercises.Models.ViewModels
 {
-    public class StudentCreateViewModel
+    public class ExerciseCreateViewModel
     {
-        public List<SelectListItem> Cohorts { get; set; }
+        public List<SelectListItem> Exercises { get; set; }
         public Student Student { get; set; }
 
         private readonly string _connectionString;
@@ -25,8 +25,6 @@ namespace StudentExercises.Models.ViewModels
                 return new SqlConnection(_connectionString);
             }
         }
-
-        public StudentCreateViewModel() { }
 
         public StudentCreateViewModel(string connectionString)
         {
